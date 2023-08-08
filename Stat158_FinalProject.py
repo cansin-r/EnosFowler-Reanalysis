@@ -3,6 +3,7 @@
 
 # In[2]:
 
+# #Uploading necessary modules for the project
 
 import pandas as pd
 import numpy as np
@@ -12,7 +13,7 @@ import statsmodels.formula.api as smf;
 
 # In[3]:
 
-
+# #Reading in the data
 data = pd.read_stata("EnosFowler_PivotalityExperiment.dta")
 
 
@@ -53,8 +54,9 @@ mdf_2 = md_2.fit()
 print(mdf_2.summary())
 
 
+# ##Part 2: Reanalysis of their experiment
 
-# ## Part 2: FRT under the Sharp Null with Difference-In-Means Test Statistic
+# ## Part 2A: FRT under the Sharp Null with Difference-In-Means Test Statistic
 # 
 
 # In[9]:
@@ -227,7 +229,7 @@ plt.title('Distribution of Estimated ATE under the Null Hypothesis for Real Trea
 
 # This finding is consistent with the coefficient estimate of the authors. 
 
-# ## Part 3
+# ## Part 2B
 # ## Post Stratification : Matched Pair Experiment
 # Inspired by George Box "Block what you can and randomize what you cannot"
 # First analyze the data within strata. Maybe do exploratory data analysis for the data overall with hispanic population and also with the other variables that were not blocked
@@ -370,7 +372,7 @@ len(matches)
 
 
 
-# ## Part 5: Regression Readjustment
+# ## Part 2C: Regression Readjustment
 # Let's see how are matched pair adjustment compares to regression adjustment
 
 # In[33]:
